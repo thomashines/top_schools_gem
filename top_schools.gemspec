@@ -1,36 +1,25 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'top_schools/version'
+require_relative './lib/top_schools/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = "top_schools"
-  spec.version       = TopSchools::VERSION
-  spec.authors       = ["thomashines"]
-  spec.email         = ["thomashines@gmail.com"]
+# lib = File.expand_path('../lib', __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
-  spec.license       = "MIT"
+Gem::Specification.new do |s|
+  s.name          = "top_schools"
+  s.version       = TopSchools::VERSION
+  s.authors       = ["thomashines"]
+  s.email         = ["thomashines@gmail.com"]
+  s.files       = ["lib/top_schools.rb", "lib/top_schools/cli.rb", "lib/top_schools/scraper.rb", "lib/top_schools/version.rb", "lib/top_schools/school.rb", "config/environment.rb"]
+  s.homepage    = 'http://rubygems.org/gems/top-schools'
+  s.summary       = "Top Coding Schools and Bootcamps"
+  s.description   = "Provides details on the 35 top coding schools in the USA"
+  s.homepage      = 'http://rubygems.org/gems/top-schools'
+  s.license       = "MIT"
 
-  # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
-  # to allow pushing to a single host or delete this section to allow pushing to any host.
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
-  else
-    raise "RubyGems 2.0 or newer is required to protect against " \
-      "public gem pushes."
-  end
+  s.executables << 'top-schools'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
-    f.match(%r{^(test|spec|features)/})
-  end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
-  spec.add_development_dependency "bundler", "~> 1.13"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  s.add_development_dependency "bundler", "~> 1.10"
+  s.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rspec", ">= 0"
+  s.add_development_dependency "nokogiri", ">= 0"
+  s.add_development_dependency "pry", ">= 0"
 end
