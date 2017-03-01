@@ -3,11 +3,11 @@ require 'nokogiri'
 require 'open-uri'
 
 require_relative "../lib/top_schools/cli"
-# require_relative "../lib/top_schools/scraper"
 require_relative "../lib/top_schools/school"
 require_relative "../lib/top_schools/version"
 
 
+# require_relative "../lib/top_schools/scraper"
 
 # Note: main module is in version.rb
 # module TopSchools

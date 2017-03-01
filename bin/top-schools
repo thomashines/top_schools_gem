@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-# require_relative '../lib/top_schools'
 require "bundler/setup"
 require "top_schools"
 
