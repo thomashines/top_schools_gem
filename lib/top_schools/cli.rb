@@ -1,5 +1,4 @@
 class TopSchools::CLI
-  # attr_accessor :all, :descriptions
 
   def call
     @all = TopSchools::School.schools

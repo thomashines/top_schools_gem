@@ -1,5 +1,5 @@
 class TopSchools::School
-  attr_accessor :name, :description
+  attr_accessor :name
 
   @all = []
   @descriptions = []
